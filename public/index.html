@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>B2B Generator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       TABS
+    ========================= */
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #e9ecef;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .tab-button.active {
+      background: #007bff;
+      color: white;
+    }
+
+    /* =========================
+       GENERATOR SECTIONS
+    ========================= */
+
+    .generator {
+      display: none;
+    }
+
+    .generator.active {
+      display: block;
+    }
+
+    .generator h2 {
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    button.generate-button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 5px;
+      background: #28a745;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button.generate-button:hover {
+      background: #218838;
+    }
+
+    .message {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .loading {
+      text-align: center;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚀 B2B Generator</h1>
+
+    <!-- =========================
+         TABS
+    ========================== -->
+
+    <div class="tabs">
+
+      <button
+        class="tab-button active"
+        onclick="showGenerator('fileGenerator', this)"
+      >
+        📁 File Generator
+      </button>
+
+      <button
+        class="tab-button"
+        onclick="showGenerator('pdfGenerator', this)"
+      >
+        📄 PDF Generator
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         FILE GENERATOR
+    ====================================================== -->
+
+    <div id="fileGenerator" class="generator active">
+
+      <h2>📁 File Generator</h2>
+
+      <form id="fileGeneratorForm">
+
+        <!-- Client -->
+
+        <div class="form-group">
+
+          <label for="client">
+            Client
+          </label>
+
+          <select id="client" name="client" required>
+
+            <option value="">
+              -- Select Client --
+            </option>
+
+            <option value="tgif">
+              TGIF
+            </option>
+
+            <option value="tgi4f_double_opt">
+              TGI4F Double Opt
+            </option>
+
+            <option value="strom">
+              Strom
+            </option>
+
+            <option value="strom_double_opt">
+              Strom Double Opt
+            </option>
+
+            <option value="w8_normal">
+              W8 Normal
+            </option>
+
+            <option value="w8_double">
+              W8 Double
+            </option>
+
+            <option value="insta">
+              Insta
+            </option>
+
+            <option value="alpha">
+              Alpha
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Base Name -->
+
+        <div class="form-group">
+
+          <label for="baseName">
+            Base Name
+          </label>
+
+          <input
+            type="text"
+            id="baseName"
+            name="baseName"
+            placeholder="Example: Campaign-ABC"
+            required
+          />
+
+        </div>
+
+
+        <!-- Max Version -->
+
+        <div class="form-group">
+
+          <label for="maxVersion">
+            Number of Versions
+          </label>
+
+          <input
+            type="number"
+            id="maxVersion"
+            name="maxVersion"
+            min="1"
+            placeholder="Example: 5"
+            required
+          />
+
+        </div>
+
+
+        
+
+
+        <!-- EDM URL -->
+
+        <div class="form-group">
+
+          <label for="edmUrl">
+            EDM URL
+          </label>
+
+          <input
+            type="text"
+            id="edmUrl"
+            name="edmUrl"
+            placeholder="https://example.com/folder/"
+            required
+          />
+
+        </div>
+
+
+        <div class="form-group">
+  <label for="outputPath">Output Path</label>
+
+  <input
+    type="text"
+    id="outputPath"
+    name="outputPath"
+    placeholder="C:\B2B\Campaigns\Campaign1"
+    required
+  />
+</div>
+
+
+        <button
+          type="submit"
+          class="generate-button"
+        >
+          🚀 Generate Files
+        </button>
+
+      </form>
+
+      <div
+        id="fileLoading"
+        class="loading"
+      >
+        ⏳ Generating files...
+      </div>
+
+      <div
+        id="fileMessage"
+        class="message"
+      ></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PDF GENERATOR
+    ====================================================== -->
+
+    <div id="pdfGenerator" class="generator">
+
+      <h2>📄 PDF Generator</h2>
+
+      <form id="pdfGeneratorForm">
+
+        <!-- Base Name -->
+
+        <div class="form-group">
+
+          <label for="pdfBaseName">
+            Base Name
+          </label>
+
+          <input
+            type="text"
+            id="pdfBaseName"
+            name="baseName"
+            placeholder="Example: Campaign-ABC"
+            required
+          />
+
+        </div>
+
+        <!-- OUTPUT PATH -->
+    <div class="form-group">
+        <label>Output Path</label>
+
+        <input
+            type="text"
+            id="pdfOutputPath"
+            name="outputPath"
+            placeholder="C:\B2B\demo"
+            required
+        >
+    </div>
+
+
+
+
+
+
+        <!-- PDF URLs -->
+
+        <div class="form-group">
+
+          <label for="pdfUrls">
+            PDF URLs
+          </label>
+
+          <textarea
+            id="pdfUrls"
+            name="urls"
+            placeholder="Paste one PDF URL per line
+
+https://example.com/file1.pdf
+https://example.com/file2.pdf
+https://example.com/file3.pdf"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="generate-button"
+        >
+          📥 Download PDFs
+        </button>
+
+      </form>
+
+      <div
+        id="pdfLoading"
+        class="loading"
+      >
+        ⏳ Downloading PDFs...
+      </div>
+
+      <div
+        id="pdfMessage"
+        class="message"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    // ==========================================
+    // SWITCH GENERATOR
+    // ==========================================
+
+    function showGenerator(generatorId, button) {
+
+      // Hide all generators
+
+      document
+        .querySelectorAll(".generator")
+        .forEach(generator => {
+          generator.classList.remove("active");
+        });
+
+
+      // Remove active from all buttons
+
+      document
+        .querySelectorAll(".tab-button")
+        .forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+
+      // Show selected generator
+
+      document
+        .getElementById(generatorId)
+        .classList.add("active");
+
+
+      // Activate selected button
+
+      button.classList.add("active");
+    }
+
+
+    // ==========================================
+    // FILE GENERATOR
+    // ==========================================
+
+    document
+      .getElementById("fileGeneratorForm")
+      .addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const loading =
+          document.getElementById("fileLoading");
+
+        const message =
+          document.getElementById("fileMessage");
+
+
+        loading.style.display = "block";
+        message.style.display = "none";
+
+
+        const formData =
+          new URLSearchParams(
+            new FormData(this)
+          );
+
+
+        try {
+
+          const response =
+            await fetch("/generate", {
+
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/x-www-form-urlencoded"
+              },
+
+              body: formData
+
+            });
+
+
+          const result =
+            await response.text();
+
+
+          loading.style.display = "none";
+
+
+          // Server currently returns HTML result
+
+          document.open();
+          document.write(result);
+          document.close();
+
+
+        } catch (error) {
+
+          loading.style.display = "none";
+
+          message.className =
+            "message error";
+
+          message.textContent =
+            "❌ File generation failed.";
+
+          message.style.display = "block";
+
+          console.error(error);
+        }
+
+      });
+
+
+    // ==========================================
+    // PDF GENERATOR
+    // ==========================================
+
+    document
+      .getElementById("pdfGeneratorForm")
+      .addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const loading =
+          document.getElementById("pdfLoading");
+
+        const message =
+          document.getElementById("pdfMessage");
+
+
+        loading.style.display = "block";
+        message.style.display = "none";
+
+
+        const outputPath =
+            document.getElementById("pdfOutputPath").value.trim();
+
+        const baseName =
+          document.getElementById("pdfBaseName").value.trim();
+
+        const urls =
+          document.getElementById("pdfUrls").value.trim();
+
+
+        try {
+
+          const response =
+            await fetch("/download", {
+
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json"
+              },
+
+              body: JSON.stringify({
+                baseName: baseName,
+                outputPath: outputPath,
+                urls: urls
+              })
+
+            });
+
+
+  const result =
+  await response.text();
+
+loading.style.display = "none";
+
+message.className =
+  "message success";
+
+message.innerHTML = result;
+
+message.style.display = "block";
+
+
+        } catch (error) {
+
+          loading.style.display = "none";
+
+          message.className =
+            "message error";
+
+          message.textContent =
+            "❌ PDF download failed.";
+
+          message.style.display = "block";
+
+          console.error(error);
+        }
+
+      });
+
+  </script>
+
+</body>
+</html>

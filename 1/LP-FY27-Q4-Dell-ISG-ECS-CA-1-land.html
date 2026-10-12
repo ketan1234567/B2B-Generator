@@ -1,0 +1,1606 @@
+
+
+
+<html lang="EN">
+
+<head>
+	<title>Production Ready AI Infastructure: A Deployment Path for Any Data Center</title>
+	<script src="https://offers.impactbnd.com/hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+	<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.css" rel="stylesheet">
+	<style>
+		/* Bootstrap Overrides */
+		.container,
+		.navbar-static-top .container,
+		.navbar-fixed-top .container,
+		.navbar-fixed-bottom .container {
+			width: 820px;
+		}
+
+		.span12 {
+			width: 820px;
+		}
+
+		.span13 {
+			width: 370px;
+		}
+
+		.span11 {
+			width: 750px;
+		}
+
+		.span10 {
+			width: 680px;
+		}
+
+		.span9 {
+			width: 610px;
+		}
+
+		.span8 {
+			width: 540px;
+		}
+
+		.span7 {
+			width: 470px;
+		}
+
+		.span6 {
+			width: 430px;
+		}
+
+		.span5 {
+			width: 330px;
+		}
+
+		.span4 {
+			width: 260px;
+		}
+
+		.span3 {
+			width: 190px;
+		}
+
+		.span2 {
+			width: 120px;
+		}
+
+		.span1 {
+			width: 50px;
+		}
+
+		.offset12 {
+			margin-left: 860px;
+		}
+
+		.offset11 {
+			margin-left: 790px;
+		}
+
+		.offset10 {
+			margin-left: 720px;
+		}
+
+		.offset9 {
+			margin-left: 650px;
+		}
+
+		.offset8 {
+			margin-left: 580px;
+		}
+
+		.offset7 {
+			margin-left: 510px;
+		}
+
+		.offset6 {
+			margin-left: 440px;
+		}
+
+		.offset5 {
+			margin-left: 370px;
+		}
+
+		.offset4 {
+			margin-left: 300px;
+		}
+
+		.offset3 {
+			margin-left: 230px;
+		}
+
+		.offset2 {
+			margin-left: 160px;
+		}
+
+		.offset1 {
+			margin-left: 90px;
+		}
+	</style>
+	<style>
+		@font-face {
+			font-family: 'bebas_neue';
+			src: url('//d1y0v6ricksqp.cloudfront.net/fonts/bebasneue-webfont.eot');
+			src: url('//d1y0v6ricksqp.cloudfront.net/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/bebasneue-webfont.woff') format('woff'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/bebasneue-webfont.ttf') format('truetype'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+
+		}
+
+		@font-face {
+			font-family: 'serifaroman';
+			src: url('//d1y0v6ricksqp.cloudfront.net/fonts/serifa_55_roman-webfont.eot');
+			src: url('//d1y0v6ricksqp.cloudfront.net/fonts/serifa_55_roman-webfont.eot?#iefix') format('embedded-opentype'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/serifa_55_roman-webfont.woff') format('woff'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/serifa_55_roman-webfont.ttf') format('truetype'),
+				url('//d1y0v6ricksqp.cloudfront.net/fonts/serifa_55_roman-webfont.svg#serifaroman') format('svg');
+			font-weight: normal;
+			font-style: normal;
+
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.featured_image .text h1,
+		#get_guide #submit_button,
+		#get_guide #click_through_link {
+			font-family: "bebas_neue", serif;
+		}
+
+		.tagline {
+			font-family: "serifaroman", serif;
+		}
+
+		.name,
+		.main_content li,
+		footer p,
+		#get_guide label {
+			font-family: "Arial";
+		}
+
+
+
+		body,
+		input,
+		textarea,
+		select {}
+
+		body {
+			background: #ebebeb;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: normal;
+		}
+
+		h1 {
+			color: #000;
+		}
+
+		.logo {
+			margin: 20px 0 20px 40px;
+		}
+
+		.logo1 {
+			margin: 40px 0 0px 20px;
+		}
+
+		.featured_image {
+			background-repeat: no-repeat;
+		}
+
+		.featured_image .padding {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.featured_image .text h1 {
+			color: #FFFFFF;
+			font-size: 58px;
+			line-height: 60px;
+		}
+
+		.featured_image .thumbnail {
+			-moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .19);
+			/* drop shadow */
+			-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .19);
+			/* drop shadow */
+			box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .19);
+			/* drop shadow */
+		}
+
+		.tagline {
+			color: #8fb9b7;
+			/* text color */
+			font-size: 22px;
+			line-height: 24px;
+		}
+
+		.main_content {
+			background: #FFFFFF;
+			color: #000080;
+		}
+
+		.main_content h2,
+		.main_content h3,
+		.main_content h4,
+		.main_content h5,
+		.main_content h6 {
+			color: #0000b5 !important;
+		}
+
+		.main_content .content {
+			padding-top: 45px;
+			padding-bottom: 35px;
+		}
+
+		.main_content .left {
+			padding-top: 35px;
+		}
+
+		.main_content .left .content {
+			padding-top: 10px;
+			padding-left: 20px;
+			padding-right: 30px;
+		}
+
+		.main_content .right .content {
+			padding-left: 35px;
+			padding-right: 65px;
+		}
+
+		.border-right {
+			border-right: 1px solid #ecebeb;
+		}
+
+		.main_content ul {
+			margin-left: 18px;
+		}
+
+		.main_content li {
+			font-size: 12px;
+			margin-bottom: 0px;
+		}
+
+		.thank_you {
+			background: #ebeaea;
+			margin-left: 0;
+			height: inherit;
+			padding: 80px 0;
+			text-align: center;
+			padding-left: 20px;
+		}
+
+		.thank_you h3,
+		.thank_you_modal h3 {
+			line-height: 26px;
+		}
+
+		.thank_you_modal {
+			height: inherit;
+			text-align: center;
+			width: 310px;
+			margin-left: -155px !important;
+		}
+
+		.thank_you .box,
+		.thank_you_modal .box {
+			margin-left: 45px;
+			margin-right: 45px;
+			opacity: .9;
+			/* layer alpha */
+			border: 1px solid #cbcbcb;
+			/* stroke */
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			/* border radius */
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			/* prevents bg color from leaking outside the border */
+			background-color: #f7f7fa;
+			/* layer fill content */
+		}
+
+		.thank_you_modal .social {
+			margin-top: 15px;
+		}
+
+		.thank_you_modal .box {
+			margin: 0;
+		}
+
+		.thank_you .box .padding,
+		.thank_you_modal .box .padding {
+			padding: 55px 20px;
+		}
+
+		.thank_you .social {
+			margin-top: 50px;
+		}
+
+		a {
+			color: #4466c8;
+		}
+
+		.form_title {
+			margin-top: -30px;
+		}
+
+		.social {
+			margin-top: 20px;
+		}
+
+		.social a {
+			margin-right: 5px;
+
+		}
+
+		.social a img {
+			margin-bottom: 5px;
+		}
+
+		.social a:hover {
+			text-decoration: none;
+		}
+
+		footer p {
+			color: #cbcbcb;
+			/* text color */
+
+			font-size: 11px;
+			padding-top: 20px;
+			padding-bottom: 40px;
+		}
+
+		footer a {
+			color: #cbcbcb;
+		}
+
+		footer a:hover {
+			color: #4466c8;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.radio_buttons label {
+			display: inline;
+		}
+
+		.name {
+			color: #656565;
+			/* text color */
+
+			font-size: 12px;
+		}
+
+		#get_guide label {
+			color: #000080;
+			font-size: 13px;
+			vertical-align: middle;
+		}
+
+		#get_guide input[type='text'],
+		#get_guide input[type='email'] {
+			border: 1px solid #999;
+			/* stroke */
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			/* border radius */
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			/* prevents bg color from leaking outside the border */
+			background-color: #f3f3f3;
+			/* layer fill content */
+		}
+
+		#get_guide input[type='text'],
+		#get_guide input[type='number'],
+		#get_guide input[type='email'],
+		#get_guide textarea {
+			width: 100%;
+			height: 30px;
+		}
+
+		#get_guide select {
+			width: 100%;
+			height: 30px;
+			color: black;
+		}
+
+		#get_guide #submit_button,
+		#get_guide #click_through_link {
+			margin-top: 20px;
+			width: 80%;
+			text-transform: uppercase;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			/* border radius */
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			/* prevents bg color from leaking outside the border */
+			background-color: #960000;
+			/* layer fill content */
+			color: #FFFFFF !important;
+			font-size: 24px;
+			padding: 15px 10px;
+
+		}
+
+		#get_guide #click_through_link {
+			display: inline-block;
+			width: 70%;
+			text-align: center;
+		}
+
+		.submit_area {
+			text-align: center;
+		}
+
+
+		.hidden {
+			display: none;
+		}
+
+
+		/* Media Queries */
+
+		/* Portrait tablet to landscape and desktop */
+		@media (min-width: 768px) and (max-width: 979px) {}
+
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+			.featured_image {
+				height: 100%;
+			}
+
+			.logo {
+				margin-left: 10px !important;
+			}
+
+			.featured_image .padding {
+				padding: 10px !important;
+			}
+
+			.phone-thumb {
+				padding-bottom: 20px;
+				display: inline !important;
+			}
+
+			.featured_image .text h1 {
+				font-size: 40px;
+				line-height: 42px;
+			}
+
+			.main_content .left .content {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.main_content .right .content {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.social {
+				margin-top: 30px;
+				padding-bottom: 30px;
+				text-align: center;
+			}
+
+			.thank_you .box {
+				margin-left: 20px;
+				margin-right: 35px;
+			}
+		}
+
+
+		.hidden-title {
+			text-indent: -9999px;
+			position: absolute;
+		}
+
+		a.white-title,
+		a.white-title:hover {
+			color: #FFFFFF;
+		}
+
+		.description {
+			margin-top: -13px;
+		}
+
+		span.error {
+			color: #f00;
+		}
+		
+		 /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+} 
+	</style>
+	<script src="https://jqueryvalidation.org/files/lib/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+		
+		jQuery.validator.addMethod(
+    "email",
+    function(value, element) {
+        // Regular expression for email validation
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+    },
+    "Please enter a valid email address."
+);
+
+
+
+			// validate signup form on keyup and submit
+			$("#signup_form").validate({
+				errorElement: 'span',
+				rules: {
+					firstname: {
+						required: true,
+					},
+					lastname: {
+						required: true,
+					},
+					job_function: {
+						required: true,
+					},
+					email: {
+						required: true,
+						
+						email: true
+					},
+					work_phone: {
+						required: true,
+						number: true
+					},
+					company: {
+						required: true,
+					},
+					std1: {
+						required: true,
+					},
+					city: {
+						required: true,
+					},
+					state: {
+						required: true,
+					},
+					country: {
+						required: true,
+					},
+					address_street1: {
+						required: true,
+					},
+					std2: {
+						required: true,
+					},
+					std3: {
+						required: true,
+					},
+					std4: {
+						required: true,
+					},
+					std5: {
+						required: true,
+					},
+					zip: {
+						required: true,
+					},
+					Industry: {
+						required: true,
+					}
+					,
+					cust1: {
+						required: true,
+					},
+					cust2: {
+						required: true,
+					},
+					cust3: {
+						required: true,
+					},
+					cust4: {
+						required: true,
+					},
+					cust5: {
+						required: true,
+					},
+					cust1_1: {
+						required: true,
+					},
+					cust1_2: {
+						required: true,
+					},
+					cust1_3: {
+						required: true,
+					}
+
+				},
+				messages: {
+					firstname: {
+						required: "This field is required."
+					},
+					lastname: {
+						required: "The details are incorrect/incomplete"
+					},
+					job_function: {
+						required: "The details are incorrect/incomplete"
+					},
+					email: {
+						required: "Please enter an email address",
+						nofreeemail: "Please enter your business email, generic email not allowed",
+						email: "Please enter a valid email address"
+					},
+					work_phone: {
+						required: "The details are incorrect/incomplete",
+						number: "Phone number must contain digits only"
+					},
+					company: {
+						required: "The details are incorrect/incomplete"
+					},
+					std1: {
+						required: "The details are incorrect/incomplete"
+					},
+					Industry: {
+						required: "The details are incorrect/incomplete"
+					},
+					city: {
+						required: "The details are incorrect/incomplete"
+					},
+					state: {
+						required: "The details are incorrect/incomplete"
+					},
+					country: {
+						required: "The details are incorrect/incomplete"
+					},
+					zip: {
+						required: "The details are incorrect/incomplete",
+						number: "Zip code must contain digits only",
+						rangelength: "Zip code must have between 3 to 5 digits"
+					},
+					address_street1: {
+						required: "The details are incorrect/incomplete"
+					},
+					std2: {
+						required: "The details are incorrect/incomplete"
+					},
+					std3: {
+						required: "The details are incorrect/incomplete"
+					},
+					std4: {
+						required: "The details are incorrect/incomplete"
+					},
+					std5: {
+						required: "The details are incorrect/incomplete"
+					},
+					Industry: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust1: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust2: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust3: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust4: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust5: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust1_1: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust1_2: {
+						required: "The details are incorrect/incomplete"
+					},
+					cust1_3: {
+						required: "The details are incorrect/incomplete"
+					}
+				}
+			});
+
+			$(".cust1_1_div,.cust1_2_div,.cust1_3_div").hide();
+
+			$("#cust1").change(function () {
+				if (this.value == "No Solution") {
+					$(".cust1_1_div").show();
+				}
+				else {
+					$(".cust1_1_div").hide();
+				}
+
+				if (this.value == "In-house solution") {
+					$(".cust1_2_div").show();
+				}
+				else {
+					$(".cust1_2_div").hide();
+				}
+
+				if (this.value == "3rd-party solution") {
+					$(".cust1_3_div").show();
+				}
+				else {
+					$(".cust1_3_div").hide();
+				}
+			});
+
+
+		});
+	</script>
+
+	<script>
+
+
+		$(document).ready(function () {
+		
+
+$("#us_states_holder").css('display','none');
+		$('#country').on('change', function () {
+				if (this.value == 'US') {
+					//$("#opt-in1").prop( "checked", true );
+					$("#us_state").prop('required',true);
+					$("#us_states_holder").css('display','block');
+					
+					
+					//$("#opt-in1").prop( "checked", false );
+					$("#ca_state").prop('required',false);
+					$("#ca_states_holder").css('display','none');
+					
+				}else  if (this.value == 'CA') {
+				
+					//$("#opt-in1").prop( "checked", false );
+					$("#us_state").prop('required',false);
+					$("#us_states_holder").css('display','none');
+				
+					//$("#opt-in1").prop( "checked", true );
+					$("#ca_state").prop('required',true);
+					$("#ca_states_holder").css('display','block');
+				}
+				else{
+					//$("#opt-in1").prop( "checked", false );
+					$("#us_state").prop('required',false);
+					$("#us_states_holder").css('display','none');
+					
+					//$("#opt-in1").prop( "checked", false );
+					$("#ca_state").prop('required',false);
+					$("#ca_states_holder").css('display','none');
+				}
+			});
+
+			
+		});
+
+	</script>
+
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+
+			<header>
+				<table class="span12" style="background-color:white;">
+					<tr>
+						<td>
+							<table style="margin:10px 5px;">
+								<tr>
+									<td>
+										<img src="https://b2b-insight.biz-tech-insights.com/whitepaper/bti_logo250x88.jpg"
+											border="0" alt="" width="170px" />
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table style=" " align="right">
+								<tr style="">
+									<td>
+										<img src="https://b2b-insight.biz-tech-insights.com/whitepaper/Dell-Technologies-AMD-Logos.png" alt="" width="380px" height="auto" style="    margin-right: 17px;">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</header>
+			<div class="span12">
+				<div id="div1">
+					<table style="width: 820px; height:130px; background: #004f71;">
+						<tbody>
+							<tr style="height: 100px;">
+								<td>
+									<p
+										style="line-height: 24px; color: #ffffff; padding: 1em; text-align: center; padding-top: 25px;">
+										<span style="font-size: 18pt;  font-family: HelveticaNeueLT Pro 57 Cn;"><strong>
+												Production Ready AI Infastructure: A Deployment Path for Any Data Center
+
+											</strong></span>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="span12 main_content">
+				<div class="row">
+					<div class="span6 left">
+						<div class="content border-right">
+							<div class="description">
+								<td>
+									<!-- <p><span style="font-size: 12px; font-weight:bold;">
+											<font color="#A52A2A">Understanding where the industry is headed.</font>
+										</span></p> -->
+
+
+<!-- Abstract start -->
+
+<p style=" font-size: 12px;margin-top:8px;margin-left:2px;padding-left:0px;">
+How can organizations build production-ready AI infrastructure in any data center? This eBook presents a practical deployment path using Dell Technologies and AMD solutions. Learn how to align compute, data and operations, simplify implementation, support evolving workloads and create a scalable foundation that helps move AI initiatives from experimentation to measurable business impact.
+
+
+
+
+
+
+
+
+
+
+</p>
+
+
+<!-- <p style=" font-size: 12px;margin-top:8px;margin-left:2px;padding-left:0px;">
+Download the eBook to discover practical guidance for building a secure, resilient, and growth&#8209;ready organization.
+
+</p> -->
+<p style=" font-size: 12px;margin-top:8px;margin-left:2px;padding-left:0px;">
+Register now for instant access to this informative Whitepaper
+</p>
+<!-- <p style=" font-size: 12px;margin-top:8px;margin-left:2px;padding-left:0px;">
+Page Length: 9
+</p>
+ -->
+ <!-- <ul style="text-align: justify; font-size: 12px;margin-top:8px;margin-left:35px;padding-left:0px;">
+
+ 
+
+</ul>  -->
+<!-- Abstract End -->
+
+
+											<br />
+										 <center><img src="https://b2b-insight.biz-tech-insights.com/whitepaper/LP-FY27-Q4-Dell-ISG-ECS-CA-1.png" alt="Thumbnail" style="width:380px;border:1px solid #b7b7b7;"></center> 
+										<br>
+										<br><br>
+								
+							</div>
+
+						</div>
+					</div>
+					<form METHOD="POST" action="LP-FY27-Q4-Dell-ISG-ECS-CA-1-sendemail.php" id="signup_form" name="signup_form"
+						class="signup_form">
+						<div class="span13 right">
+							<div class="content">
+								<div class="form_title">
+									<h1><span style="font-size: 30px; line-height: normal;font-weight:bold;">
+											<font color="#c0504d">Download NOW!</font>
+										</span></h1>
+									<div id="get_guide">
+
+										<!--XXX ... DON'T CHANGE THIS CODE ... XXX-->
+										<input type="hidden" name="action" id="action" value="insert" />
+										<input type="hidden" name="camp_id" id="camp_id" value="LP-FY27-Q4-Dell-ISG-ECS-CA-1" />
+										<!--XXX ... DON'T CHANGE THIS CODE ... XXX-->
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="firstname" class="name">
+											First Name<font color="red">*</font>
+										</label>
+										<input id="firstname" Name="firstname" type="text" value="" />
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="lastname" class="name">
+											Last Name<font color="red">*</font>
+										</label>
+										<input id="lastname" Name="data[0]" required type="text" value="">
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="email" class="name">
+											 Email<font color="red">*</font>
+										</label>
+										<input id="email" Name="data[1]" required type="email" value="">
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="company" class="name">
+											Company<font color="red">*</font>
+										</label>
+										<input id="company" Name="data[2]" required type="text" value="">
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="work_phone" class="name">
+											Phone Number<font color="red">*</font>
+										</label>
+										<input id="work_phone" Name="data[3]" required type="number" onkeydown="return event.keyCode !== 69" value="">
+
+									<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="title" class="name">
+											Job Title<font color="red">*</font>
+										</label>
+										<section class="section" style="">
+											<select name="data[4]" required="" id="Title">
+    		<option value=""></option>
+				<option value="Artificial Intelligence">Artificial Intelligence</option><option value="CAIO">CAIO</option><option value="CDO">CDO</option><option value="CEO">CEO</option><option value="CFO">CFO</option><option value="Chairman">Chairman</option><option value="Chief Artificial Intelligence Officer">Chief Artificial Intelligence Officer</option><option value="Chief Data Officer">Chief Data Officer</option><option value="Chief Digital Officer">Chief Digital Officer</option><option value="Chief Executive Officer">Chief Executive Officer</option><option value="Chief Financial Officer">Chief Financial Officer</option><option value="Chief Information Officer">Chief Information Officer</option><option value="Chief Information Security Officer">Chief Information Security Officer</option><option value="Chief Officer">Chief Officer</option><option value="Chief Operating Officer">Chief Operating Officer</option><option value="Chief Technical Officer">Chief Technical Officer</option><option value="Chief Technology Officer">Chief Technology Officer</option><option value="CIO">CIO</option><option value="CISO">CISO</option><option value="Cloud Architect">Cloud Architect</option><option value="Compliance Director">Compliance Director</option><option value="Compliance Manager">Compliance Manager</option><option value="COO">COO</option><option value="CTO">CTO</option><option value="DevOps Lead">DevOps Lead</option><option value="Director Engineering">Director Engineering</option><option value="Director of Data Engineering">Director of Data Engineering</option><option value="Director of Data Science">Director of Data Science</option><option value="Director of Operations">Director of Operations</option><option value="Director Research">Director Research</option><option value="Engineering Manager">Engineering Manager</option><option value="Executive Director">Executive Director</option><option value="Founder">Founder</option><option value="Head of AI">Head of AI</option><option value="Head of Engineering">Head of Engineering</option><option value="Head of Information Technology">Head of Information Technology</option><option value="Head of Operations">Head of Operations</option><option value="Head of Systems Admin.">Head of Systems Admin.</option><option value="Information Systems Director">Information Systems Director</option><option value="Information Systems Manager">Information Systems Manager</option><option value="IT Director">IT Director</option><option value="IT Manager">IT Manager</option><option value="Managing Director">Managing Director</option><option value="Office Manager">Office Manager</option><option value="Owner">Owner</option><option value="President">President</option><option value="Principal">Principal</option><option value="Procurement Director">Procurement Director</option><option value="Procurement Manager">Procurement Manager</option><option value="Program Director">Program Director</option><option value="Purchase Manager">Purchase Manager</option><option value="Purchasing Director">Purchasing Director</option><option value="Purchasing Manager">Purchasing Manager</option><option value="Research Director">Research Director</option><option value="Research Manager">Research Manager</option><option value="Senior Director">Senior Director</option><option value="Senior Director, Engineering">Senior Director, Engineering</option><option value="Senior Engineer">Senior Engineer</option><option value="Senior Operations Manager">Senior Operations Manager</option><option value="Supervisor IT">Supervisor IT</option><option value="Systems Admin. Lead">Systems Admin. Lead</option><option value="Vice President of Digital Transformation">Vice President of Digital Transformation</option><option value="Vice President of IT">Vice President of IT</option><option value="VP">VP</option>	
+			</select>
+<!-- Predictive text End-->
+										
+										
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="address" class="address">
+											Address<font color="red">*</font>
+										</label>
+										<input id="address" Name="data[5]" required type="text" value="">
+										
+										
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="address2" class="address2">
+											Address 2
+										</label>
+										<input id="address2" Name="data[6]"  type="text" value="">
+										
+										
+										
+										
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="city" class="city">
+											City<font color="red">*</font>
+										</label>
+										<input id="city" Name="data[7]" required type="text" value="">
+										
+										
+																				<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="province" class="name">
+											Province<font color="red">*</font>
+										</label>
+										<section class="section" id="us_show" style="">
+											<select name="data[8]" required="" id="province">
+    		<option value=""></option>
+				<option value="Alberta">Alberta</option>
+<option value="British Columbia">British Columbia</option>
+<option value="Manitoba">Manitoba</option>
+<option value="New Brunswick">New Brunswick</option>
+<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+<option value="Nova Scotia">Nova Scotia</option>
+<option value="Ontario">Ontario</option>
+<option value="Prince Edward Island">Prince Edward Island</option>
+<option value="Quebec">Quebec</option>
+<option value="Saskatchewan">Saskatchewan</option>
+<option value="Northwest Territories">Northwest Territories</option>
+<option value="Nunavut">Nunavut</option>
+<option value="Yukon">Yukon</option>
+
+				 
+			</select>
+										</section>
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="zip" class="name">
+											Postal Code<font color="red">*</font>
+										</label>
+										<input type="text" id="zip" Name="data[9]" required>
+
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="country" class="name">
+											Country<font color="red">*</font>
+										</label>
+										<select name="data[10]" required="" id="country">
+    		<option value=""></option>
+				<option id="form_0974_fld_11-0" value="AF">Afghanistan</option>
+				<option id="form_0974_fld_11-1" value="AL">Albania</option>
+				<option id="form_0974_fld_11-2" value="DZ">Algeria</option>
+				<option id="form_0974_fld_11-3" value="AS">American Samoa</option>
+				<option id="form_0974_fld_11-4" value="AD">Andorra</option>
+				<option id="form_0974_fld_11-5" value="AO">Angola</option>
+				<option id="form_0974_fld_11-6" value="AI">Anguilla</option>
+				<option id="form_0974_fld_11-7" value="AQ">Antarctica</option>
+				<option id="form_0974_fld_11-8" value="AG">Antigua and Barbuda</option>
+				<option id="form_0974_fld_11-9" value="AR">Argentina</option>
+				<option id="form_0974_fld_11-10" value="AM">Armenia</option>
+				<option id="form_0974_fld_11-11" value="AW">Aruba</option>
+				<option id="form_0974_fld_11-12" value="AU">Australia</option>
+				<option id="form_0974_fld_11-13" value="AT">Austria</option>
+				<option id="form_0974_fld_11-14" value="AZ">Azerbaijan</option>
+				<option id="form_0974_fld_11-15" value="BS">Bahamas</option>
+				<option id="form_0974_fld_11-16" value="BH">Bahrain</option>
+				<option id="form_0974_fld_11-17" value="BD">Bangladesh</option>
+				<option id="form_0974_fld_11-18" value="BB">Barbados</option>
+				<option id="form_0974_fld_11-19" value="BY">Belarus</option>
+				<option id="form_0974_fld_11-20" value="BE">Belgium</option>
+				<option id="form_0974_fld_11-21" value="BZ">Belize</option>
+				<option id="form_0974_fld_11-22" value="BJ">Benin</option>
+				<option id="form_0974_fld_11-23" value="BM">Bermuda</option>
+				<option id="form_0974_fld_11-24" value="BT">Bhutan</option>
+				<option id="form_0974_fld_11-25" value="BO">Bolivia</option>
+				<option id="form_0974_fld_11-26" value="BQ">Bonaire</option>
+				<option id="form_0974_fld_11-27" value="BA">Bosnia</option>
+				<option id="form_0974_fld_11-28" value="BW">Botswana</option>
+				<option id="form_0974_fld_11-29" value="BV">Bouvet Island</option>
+				<option id="form_0974_fld_11-30" value="BR">Brazil</option>
+				<option id="form_0974_fld_11-31" value="IO">British Indian Ocean Territory</option>
+				<option id="form_0974_fld_11-32" value="BN">Brunei</option>
+				<option id="form_0974_fld_11-33" value="BG">Bulgaria</option>
+				<option id="form_0974_fld_11-34" value="BF">Burkina Faso</option>
+				<option id="form_0974_fld_11-35" value="BI">Burundi</option>
+				<option id="form_0974_fld_11-36" value="KH">Cambodia</option>
+				<option id="form_0974_fld_11-37" value="CM">Cameroon</option>
+				<option id="form_0974_fld_11-38" value="CA">Canada</option>
+				<option id="form_0974_fld_11-39" value="CV">Cape Verde</option>
+				<option id="form_0974_fld_11-40" value="KY">Cayman Islands</option>
+				<option id="form_0974_fld_11-41" value="CF">Central African Republic</option>
+				<option id="form_0974_fld_11-42" value="TD">Chad</option>
+				<option id="form_0974_fld_11-43" value="CL">Chile</option>
+				<option id="form_0974_fld_11-44" value="CN">China</option>
+				<option id="form_0974_fld_11-45" value="CX">Christmas Island</option>
+				<option id="form_0974_fld_11-46" value="CC">Cocos Islands</option>
+				<option id="form_0974_fld_11-47" value="CO">Colombia</option>
+				<option id="form_0974_fld_11-48" value="KM">Comoros</option>
+				<option id="form_0974_fld_11-49" value="CG">Congo</option>
+				<option id="form_0974_fld_11-50" value="CD">Congo, Dem. Rep.</option>
+				<option id="form_0974_fld_11-51" value="CK">Cook Islands</option>
+				<option id="form_0974_fld_11-52" value="CR">Costa Rica</option>
+				<option id="form_0974_fld_11-53" value="HR">Croatia</option>
+				<option id="form_0974_fld_11-54" value="CU">Cuba</option>
+				<option id="form_0974_fld_11-55" value="CW">Cura&#195;&#167;ao</option>
+				<option id="form_0974_fld_11-56" value="CY">Cyprus</option>
+				<option id="form_0974_fld_11-57" value="CZ">Czech Republic</option>
+				<option id="form_0974_fld_11-58" value="DK">Denmark</option>
+				<option id="form_0974_fld_11-59" value="DJ">Djibouti</option>
+				<option id="form_0974_fld_11-60" value="DM">Dominica</option>
+				<option id="form_0974_fld_11-61" value="DO">Dominican Republic</option>
+				<option id="form_0974_fld_11-62" value="EC">Ecuador</option>
+				<option id="form_0974_fld_11-63" value="EG">Egypt</option>
+				<option id="form_0974_fld_11-64" value="SV">El Salvador</option>
+				<option id="form_0974_fld_11-65" value="GQ">Equatorial Guinea</option>
+				<option id="form_0974_fld_11-66" value="ER">Eritrea</option>
+				<option id="form_0974_fld_11-67" value="EE">Estonia</option>
+				<option id="form_0974_fld_11-68" value="ET">Ethiopia</option>
+				<option id="form_0974_fld_11-69" value="FK">Falkland Islands (Malvinas)</option>
+				<option id="form_0974_fld_11-70" value="FO">Faroe Islands</option>
+				<option id="form_0974_fld_11-71" value="FJ">Fiji</option>
+				<option id="form_0974_fld_11-72" value="FI">Finland</option>
+				<option id="form_0974_fld_11-73" value="FR">France</option>
+				<option id="form_0974_fld_11-74" value="GF">French Guiana</option>
+				<option id="form_0974_fld_11-75" value="PF">French Polynesia</option>
+				<option id="form_0974_fld_11-76" value="TF">French Southern Territories</option>
+				<option id="form_0974_fld_11-77" value="GA">Gabon</option>
+				<option id="form_0974_fld_11-78" value="GM">Gambia</option>
+				<option id="form_0974_fld_11-79" value="GE">Georgia</option>
+				<option id="form_0974_fld_11-80" value="DE">Germany</option>
+				<option id="form_0974_fld_11-81" value="GH">Ghana</option>
+				<option id="form_0974_fld_11-82" value="GI">Gibraltar</option>
+				<option id="form_0974_fld_11-83" value="GR">Greece</option>
+				<option id="form_0974_fld_11-84" value="GL">Greenland</option>
+				<option id="form_0974_fld_11-85" value="GD">Grenada</option>
+				<option id="form_0974_fld_11-86" value="GP">Guadeloupe</option>
+				<option id="form_0974_fld_11-87" value="GU">Guam</option>
+				<option id="form_0974_fld_11-88" value="GT">Guatemala</option>
+				<option id="form_0974_fld_11-89" value="GG">Guernsey</option>
+				<option id="form_0974_fld_11-90" value="GN">Guinea</option>
+				<option id="form_0974_fld_11-91" value="GW">Guinea-Bissau</option>
+				<option id="form_0974_fld_11-92" value="GY">Guyana</option>
+				<option id="form_0974_fld_11-93" value="HT">Haiti</option>
+				<option id="form_0974_fld_11-94" value="HM">Heard Island</option>
+				<option id="form_0974_fld_11-95" value="HN">Honduras</option>
+				<option id="form_0974_fld_11-96" value="HK">Hong Kong</option>
+				<option id="form_0974_fld_11-97" value="HU">Hungary</option>
+				<option id="form_0974_fld_11-98" value="IS">Iceland</option>
+				<option id="form_0974_fld_11-99" value="IN">India</option>
+				<option id="form_0974_fld_11-100" value="ID">Indonesia</option>
+				<option id="form_0974_fld_11-101" value="IR">Iran</option>
+				<option id="form_0974_fld_11-102" value="IQ">Iraq</option>
+				<option id="form_0974_fld_11-103" value="IE">Ireland</option>
+				<option id="form_0974_fld_11-104" value="IM">Isle of Man</option>
+				<!-- <option id="form_0974_fld_11-105" value="IL">Israel</option> -->
+				<option id="form_0974_fld_11-106" value="IT">Italy</option>
+				<option id="form_0974_fld_11-107" value="CI">Ivory Coast</option>
+				<option id="form_0974_fld_11-108" value="JM">Jamaica</option>
+				<option id="form_0974_fld_11-109" value="JP">Japan</option>
+				<option id="form_0974_fld_11-110" value="JE">Jersey</option>
+				<option id="form_0974_fld_11-111" value="JO">Jordan</option>
+				<option id="form_0974_fld_11-112" value="KZ">Kazakhstan</option>
+				<option id="form_0974_fld_11-113" value="KE">Kenya</option>
+				<option id="form_0974_fld_11-114" value="KI">Kiribati</option>
+				<option id="form_0974_fld_11-115" value="KR">Korea</option>
+				<option id="form_0974_fld_11-116" value="KP">Korea, DPRK</option>
+				<option id="form_0974_fld_11-117" value="KW">Kuwait</option>
+				<option id="form_0974_fld_11-118" value="KG">Kyrgyzstan</option>
+				<option id="form_0974_fld_11-119" value="LA">Laos</option>
+				<option id="form_0974_fld_11-120" value="LV">Latvia</option>
+				<option id="form_0974_fld_11-121" value="LB">Lebanon</option>
+				<option id="form_0974_fld_11-122" value="LS">Lesotho</option>
+				<option id="form_0974_fld_11-123" value="LR">Liberia</option>
+				<option id="form_0974_fld_11-124" value="LY">Libya</option>
+				<option id="form_0974_fld_11-125" value="LI">Liechtenstein</option>
+				<option id="form_0974_fld_11-126" value="LT">Lithuania</option>
+				<option id="form_0974_fld_11-127" value="LU">Luxembourg</option>
+				<option id="form_0974_fld_11-128" value="MO">Macao</option>
+				<option id="form_0974_fld_11-129" value="MK">Macedonia</option>
+				<option id="form_0974_fld_11-130" value="MG">Madagascar</option>
+				<option id="form_0974_fld_11-131" value="MW">Malawi</option>
+				<option id="form_0974_fld_11-132" value="MY">Malaysia</option>
+				<option id="form_0974_fld_11-133" value="MV">Maldives</option>
+				<option id="form_0974_fld_11-134" value="ML">Mali</option>
+				<option id="form_0974_fld_11-135" value="MT">Malta</option>
+				<option id="form_0974_fld_11-136" value="MH">Marshall Islands</option>
+				<option id="form_0974_fld_11-137" value="MQ">Martinique</option>
+				<option id="form_0974_fld_11-138" value="MR">Mauritania</option>
+				<option id="form_0974_fld_11-139" value="MU">Mauritius</option>
+				<option id="form_0974_fld_11-140" value="YT">Mayotte</option>
+				<option id="form_0974_fld_11-141" value="MX">Mexico</option>
+				<option id="form_0974_fld_11-142" value="FM">Micronesia, Fed.</option>
+				<option id="form_0974_fld_11-143" value="MD">Moldova</option>
+				<option id="form_0974_fld_11-144" value="MC">Monaco</option>
+				<option id="form_0974_fld_11-145" value="MN">Mongolia</option>
+				<option id="form_0974_fld_11-146" value="ME">Montenegro</option>
+				<option id="form_0974_fld_11-147" value="MS">Montserrat</option>
+				<option id="form_0974_fld_11-148" value="MA">Morocco</option>
+				<option id="form_0974_fld_11-149" value="MZ">Mozambique</option>
+				<option id="form_0974_fld_11-150" value="MM">Myanmar</option>
+				<option id="form_0974_fld_11-151" value="NA">Namibia</option>
+				<option id="form_0974_fld_11-152" value="NR">Nauru</option>
+				<option id="form_0974_fld_11-153" value="NP">Nepal</option>
+				<option id="form_0974_fld_11-154" value="NL">Netherlands</option>
+				<option id="form_0974_fld_11-155" value="NC">New Caledonia</option>
+				<option id="form_0974_fld_11-156" value="NZ">New Zealand</option>
+				<option id="form_0974_fld_11-157" value="NI">Nicaragua</option>
+				<option id="form_0974_fld_11-158" value="NE">Niger</option>
+				<option id="form_0974_fld_11-159" value="NG">Nigeria</option>
+				<option id="form_0974_fld_11-160" value="NU">Niue</option>
+				<option id="form_0974_fld_11-161" value="NF">Norfolk Island</option>
+				<option id="form_0974_fld_11-162" value="MP">Northern Marianas</option>
+				<option id="form_0974_fld_11-163" value="NO">Norway</option>
+				<option id="form_0974_fld_11-164" value="OM">Oman</option>
+				<option id="form_0974_fld_11-165" value="PK">Pakistan</option>
+				<option id="form_0974_fld_11-166" value="PW">Palau</option>
+				<option id="form_0974_fld_11-167" value="PS">Palestinian Terr.</option>
+				<option id="form_0974_fld_11-168" value="PA">Panama</option>
+				<option id="form_0974_fld_11-169" value="PG">Papua New Guinea</option>
+				<option id="form_0974_fld_11-170" value="PY">Paraguay</option>
+				<option id="form_0974_fld_11-171" value="PE">Peru</option>
+				<option id="form_0974_fld_11-172" value="PH">Philippines</option>
+				<option id="form_0974_fld_11-173" value="PN">Pitcairn</option>
+				<option id="form_0974_fld_11-174" value="PL">Poland</option>
+				<option id="form_0974_fld_11-175" value="PT">Portugal</option>
+				<option id="form_0974_fld_11-176" value="PR">Puerto Rico</option>
+				<option id="form_0974_fld_11-177" value="QA">Qatar</option>
+				<option id="form_0974_fld_11-178" value="RO">Romania</option>
+				<option id="form_0974_fld_11-179" value="RU">Russia</option>
+				<option id="form_0974_fld_11-180" value="RW">Rwanda</option>
+				<option id="form_0974_fld_11-181" value="RE">R&#195;&#169;union</option>
+				<option id="form_0974_fld_11-182" value="BL">Saint Barth&#195;&#169;lemy</option>
+				<option id="form_0974_fld_11-183" value="SH">Saint Helena</option>
+				<option id="form_0974_fld_11-184" value="KN">Saint Kitts and Nevis</option>
+				<option id="form_0974_fld_11-185" value="LC">Saint Lucia</option>
+				<option id="form_0974_fld_11-186" value="MF">Saint Martin (French)</option>
+				<option id="form_0974_fld_11-187" value="PM">Saint Pierre and Miquelon</option>
+				<option id="form_0974_fld_11-188" value="VC">Saint Vincent</option>
+				<option id="form_0974_fld_11-189" value="WS">Samoa</option>
+				<option id="form_0974_fld_11-190" value="SM">San Marino</option>
+				<option id="form_0974_fld_11-191" value="ST">Sao Tome &amp; Principe</option>
+				<option id="form_0974_fld_11-192" value="SA">Saudi Arabia</option>
+				<option id="form_0974_fld_11-193" value="SN">Senegal</option>
+				<option id="form_0974_fld_11-194" value="RS">Serbia</option>
+				<option id="form_0974_fld_11-195" value="SC">Seychelles</option>
+				<option id="form_0974_fld_11-196" value="SL">Sierra Leone</option>
+				<option id="form_0974_fld_11-197" value="SG">Singapore</option>
+				<option id="form_0974_fld_11-198" value="SX">Sint Maarten (Dutch)</option>
+				<option id="form_0974_fld_11-199" value="SK">Slovakia</option>
+				<option id="form_0974_fld_11-200" value="SI">Slovenia</option>
+				<option id="form_0974_fld_11-201" value="SB">Solomon Islands</option>
+				<option id="form_0974_fld_11-202" value="SO">Somalia</option>
+				<option id="form_0974_fld_11-203" value="ZA">South Africa</option>
+				<option id="form_0974_fld_11-204" value="GS">South Georgia and the South Sandwich Islands</option>
+				<option id="form_0974_fld_11-205" value="SS">South Sudan</option>
+				<option id="form_0974_fld_11-206" value="ES">Spain</option>
+				<option id="form_0974_fld_11-207" value="LK">Sri Lanka</option>
+				<option id="form_0974_fld_11-208" value="SD">Sudan</option>
+				<option id="form_0974_fld_11-209" value="SR">Suriname</option>
+				<option id="form_0974_fld_11-210" value="SJ">Svalbard</option>
+				<option id="form_0974_fld_11-211" value="SZ">Swaziland</option>
+				<option id="form_0974_fld_11-212" value="SE">Sweden</option>
+				<option id="form_0974_fld_11-213" value="CH">Switzerland</option>
+				<option id="form_0974_fld_11-214" value="SY">Syria</option>
+				<option id="form_0974_fld_11-215" value="TW">Taiwan</option>
+				<option id="form_0974_fld_11-216" value="TJ">Tajikistan</option>
+				<option id="form_0974_fld_11-217" value="TZ">Tanzania</option>
+				<option id="form_0974_fld_11-218" value="TH">Thailand</option>
+				<option id="form_0974_fld_11-219" value="TL">Timor-Leste</option>
+				<option id="form_0974_fld_11-220" value="TG">Togo</option>
+				<option id="form_0974_fld_11-221" value="TK">Tokelau</option>
+				<option id="form_0974_fld_11-222" value="TO">Tonga</option>
+				<option id="form_0974_fld_11-223" value="TT">Trinidad and Tobago</option>
+				<option id="form_0974_fld_11-224" value="TN">Tunisia</option>
+				<option id="form_0974_fld_11-225" value="TR">Turkey</option>
+				<option id="form_0974_fld_11-226" value="TM">Turkmenistan</option>
+				<option id="form_0974_fld_11-227" value="TC">Turks and Caicos</option>
+				<option id="form_0974_fld_11-228" value="TV">Tuvalu</option>
+				<option id="form_0974_fld_11-229" value="AE">U.A.E.</option>
+				<option id="form_0974_fld_11-230" value="UG">Uganda</option>
+				<option id="form_0974_fld_11-231" value="UA">Ukraine</option>
+				<option id="form_0974_fld_11-232" value="GB">United Kingdom</option>
+				<option id="form_0974_fld_11-233" value="US">United States</option>
+				<option id="form_0974_fld_11-234" value="UM">United States Minor Outlying Islands</option>
+				<option id="form_0974_fld_11-235" value="UY">Uruguay</option>
+				<option id="form_0974_fld_11-236" value="UZ">Uzbekistan</option>
+				<option id="form_0974_fld_11-237" value="VU">Vanuatu</option>
+				<option id="form_0974_fld_11-238" value="VA">Vatican City</option>
+				<option id="form_0974_fld_11-239" value="VE">Venezuela</option>
+				<option id="form_0974_fld_11-240" value="VN">Viet Nam</option>
+				<option id="form_0974_fld_11-241" value="VG">Virgin Islands, British</option>
+				<option id="form_0974_fld_11-242" value="VI">Virgin Islands, U.S.</option>
+				<option id="form_0974_fld_11-243" value="WF">Wallis and Futuna</option>
+				<option id="form_0974_fld_11-244" value="EH">Western Sahara</option>
+				<option id="form_0974_fld_11-245" value="YE">Yemen</option>
+				<option id="form_0974_fld_11-246" value="ZM">Zambia</option>
+				<option id="form_0974_fld_11-247" value="ZW">Zimbabwe</option>
+				<option id="form_0974_fld_11-248" value="AX">&#197;land Islands</option>
+			</select>
+											
+										</select>
+
+
+										<!-- <div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="us_state" class="name">
+											State<font color="red">*</font>
+										</label>
+										<section class="section" id="us_show" style="">
+											<select name="data[9]" required="" id="state">
+    		<option value=""></option>
+				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="DC">District of Columbia</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="PR">Puerto Rico</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+				<option value="Not Applicable">Not Applicable</option>
+			</select>
+										</section> -->
+
+						
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="Industry" class="name">
+											Company Size<font color="red">*</font>
+										</label>
+										<select name="data[11]" required="" id="Industry">
+    		<option value=""></option>
+	
+				<option value="10000+">10000+</option><option value="5000 - 9999">5000 - 9999</option><option value="1000 - 4999">1000 - 4999</option><option value="500 - 999">500 - 999</option><option value="100 - 499">100 - 499</option><option value="26 - 99">26 - 99</option><option value="1 - 25">1 - 25</option>
+			</select>
+			
+			
+			<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="Industry" class="name">
+											Industry<font color="red">*</font>
+										</label>
+										<select name="data[12]" required="" id="Industry">
+    		<option value=""></option>
+				<option value="Aerospace">Aerospace</option><option value="Agriculture">Agriculture</option><option value="Apparel">Apparel</option><option value="Automotive">Automotive</option><option value="Banking">Banking</option><option value="Biotechnology">Biotechnology</option><option value="Chemicals">Chemicals</option><option value="Communications">Communications</option><option value="Construction">Construction</option><option value="Consulting">Consulting</option><option value="Education">Education</option><option value="Electronics">Electronics</option><option value="Energy">Energy</option><option value="Engineering">Engineering</option><option value="Entertainment">Entertainment</option><option value="Environmental">Environmental</option><option value="Finance">Finance</option><option value="Food & Beverage">Food & Beverage</option><option value="Government">Government</option><option value="Healthcare">Healthcare</option><option value="Hospitality">Hospitality</option><option value="Insurance">Insurance</option><option value="Machinery">Machinery</option><option value="Manufacturing">Manufacturing</option><option value="Media">Media</option><option value="Mining">Mining</option><option value="Not For Profit">Not For Profit</option><option value="Other">Other</option><option value="Pharmaceuticals">Pharmaceuticals</option><option value="Recreation">Recreation</option><option value="Retail">Retail</option><option value="Services">Services</option><option value="Shipping">Shipping</option><option value="Technology">Technology</option><option value="Telecommunications">Telecommunications</option><option value="Transportation">Transportation</option><option value="Utilities">Utilities</option>
+			</select>
+			
+			
+			
+			
+													<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std12" class="name">
+											 Which of the following solutions are you looking to invest in or refresh in the next 6 months?
+<font color="red">*</font>
+										</label>
+										<select id="std12" Name="data[20]" required>
+											<option value="">Select</option>
+
+<option value="Notebooks/Desktops">Notebooks/Desktops</option><option value="Workstations">Workstations</option><option value="Monitors or Client Peripherals">Monitors or Client Peripherals</option><option value="AI PC">AI PC</option><option value="As-a-Service">As-a-Service</option><option value="None">None</option>
+
+										</select>
+										
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std123" class="name">
+											If you have an approved budget, which range aligns with your project? 
+<font color="red">*</font>
+										</label>
+										<select id="std123" Name="data[21]" required>
+											<option value="">Select</option>
+
+
+<option value="No approved budget">No approved budget</option><option value="Up to $2,000">Up to $2,000</option><option value="$2,000 to $10,000">$2,000 to $10,000</option><option value="$10,000 to $50,000">$10,000 to $50,000</option><option value="Above $50,000">Above $50,000</option>
+
+
+										</select>
+										
+										
+										
+										
+
+										
+										<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std14" class="name">
+											  What are the primary challenges you encounter with your current PC solutions?
+<font color="red">*</font>
+										</label>
+										<select id="std14" Name="data[23]" required>
+											<option value="">Select</option>
+
+<option value="Strengthening endpoint security">Strengthening endpoint security</option><option value="Improving employee productivity and experience">Improving employee productivity and experience</option><option value="Simplifying PC deployment and management">Simplifying PC deployment and management</option><option value="Supporting a hybrid workforce effectively">Supporting a hybrid workforce effectively</option><option value="Optimizing IT costs and device investments">Optimizing IT costs and device investments</option><option value="No Challenge">No Challenge</option>
+
+										</select>
+
+										
+
+
+										<!-- <div class="clearfix"></div> -->
+										<!-- <div class="spacer"></div> -->
+										<!-- <label for="job_role" class="name"> -->
+											<!-- Job Role<font color="red">*</font> -->
+										<!-- </label> -->
+										<!-- <select id="job_role" Name="data[9]" required> -->
+											<!-- <option value="">Select</option> -->
+											<!-- <option value="Academic / Researcher">Academic / Researcher</option> -->
+											<!-- <option value="Advisor / Consultant">Advisor / Consultant</option> -->
+											<!-- <option value="Business Executive">Business Executive</option> -->
+											<!-- <option value="Developer / Engineer">Developer / Engineer</option> -->
+											<!-- <option value="Entrepreneur (Founder/Co-Founder)">Entrepreneur (Founder/Co-Founder)</option> -->
+											<!-- <option value="IT Executive">IT Executive</option> -->
+											<!-- <option value="IT Professional or Technical Manager">IT Professional or Technical Manager</option> -->
+											<!-- <option value="Press / Media Analyst">Press / Media Analyst</option> -->
+											<!-- <option value="Sales / Marketing">Sales / Marketing</option> -->
+											<!-- <option value="Student">Student</option> -->
+											<!-- <option value="Solution or Systems Architect">Solution or Systems Architect</option> -->
+											<!-- <option value="System Administrator">System Administrator</option> -->
+											<!-- <option value="Venture Capitalist">Venture Capitalist</option> -->
+										<!-- </select> -->
+
+										
+							 	
+									<!-- 	<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std12" class="name">
+											 Which of the following solutions are you looking to invest in or refresh in the next 6 months?
+<font color="red">*</font>
+										</label>
+										<select id="std12" Name="data[20]" required>
+											<option value="">Select</option>
+
+<option value="Notebooks/Desktops">Notebooks/Desktops</option><option value="Workstations ">Workstations </option><option value="Monitors or Client Peripherals">Monitors or Client Peripherals</option><option value="AI PC ">AI PC </option><option value="As-a-Service">As-a-Service</option><option value="None">None</option>
+
+										</select> -->
+										
+										
+									<!-- 	<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std12" class="name">
+											 If you have an approved budget, which range aligns with your project?
+<font color="red">*</font>
+										</label>
+										<select id="std12" Name="data[21]" required>
+											<option value="">Select</option>
+
+
+<option value="No approved budget ">No approved budget </option><option value="Up to 2,000 £/€ ">Up to 2,000 &#163;/&#8364; </option><option value="2,000 to 10,000 £/€">2,000 to 10,000 &#163;/&#8364;</option><option value="10,000 to 50,000 £/€">10,000 to 50,000 &#163;/&#8364;</option><option value="Above 50,000 £/€">Above 50,000 &#163;/&#8364;</option>
+
+
+										</select> -->
+										
+										
+										
+										
+										<!-- 		<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std13" class="name">
+											 Would you like to talk with a Dell Technologies expert about any challenge your company is facing ?
+<font color="red">*</font>
+										</label>
+										<select id="std13" Name="data[22]" required>
+											<option value="">Select</option>
+
+<option value="Yes on refreshing or modernising end‑user devices ">Yes on refreshing or modernising end&#8209;user devices </option><option value="Yes on securing hybrid or remote work">Yes on securing hybrid or remote work</option><option value="Yes on reducing IT complexity and management effort">Yes on reducing IT complexity and management effort</option><option value="Yes on optimising IT spend">Yes on optimising IT spend</option><option value="Yes on supporting high‑performance or specialised workloads ">Yes on supporting high&#8209;performance or specialised workloads </option><option value="Yes on sustainability & environmental requirements">Yes on sustainability & environmental requirements</option><option value="No, I don't want to speak with a Dell Technologies expert">No, I don't want to speak with a Dell Technologies expert</option>
+
+										</select> -->
+										
+										
+										
+										<!--<div class="clearfix"></div>
+										<div class="spacer"></div>
+										<label for="std14" class="name">
+											When are you planning on implementing this solution? <font color="red">*</font>
+										</label>
+										<select id="std14" Name="data[23]" required>
+											<option value="">Select</option>
+
+<option value="Immediately">Immediately</option>
+<option value="1-3 Months"> 1-3 Months </option>
+<option value="Not within the next 3 months or Undecided ">Not within the next 3 months or Undecided </option>
+
+										</select>-->
+										
+
+									 <div class="form-group">
+									 <div class="checkbox" style="padding-left: 20px !important;">
+									
+												<label for="opt-in1">
+												<p style=" margin-left:-19px;">
+		
+													 By clicking Submit, you agree to be contacted by&#160;<a href="https://investors.delltechnologies.com/node/17511/html
+">Dell Technologies and its group of companies</a>&#160;(&#8220;Dell&#8221;) Sales representatives. For more information about how Dell uses, shares, and protects your personal data, read our&#160;<a href="https://www.dell.com/en-ca/lp/legal/policies-privacy  
+">Privacy Statement.</a> If you already receive offers from Dell,&#160;<a href="https://www.dell.com/preferences/ptc
+">sign in</a>&#160;to manage your preference.	
+												</p>
+												<br>
+												<p style="
+    margin-left: 18px;
+">
+													<input type="checkbox" name="data[24]" id="opt-in1"  value="Submit" > Submit
+												</label>
+												</p>
+												<br>
+												</div> 
+
+
+										<div class="form-group">
+											<div class="checkbox" style="padding-left: 20px !important;">
+									
+												<label for="opt-in1">
+												<p style=" margin-left:-19px;">
+		
+													 <a href="https://investors.delltechnologies.com/node/17511/html
+">Dell Technologies and its group of companies</a> (&#8220;Dell&#8221;) would like to stay in touch to hear about your needs and to keep you updated on products, services, solutions, exclusive offers, and special events. For more details on our information practices, see our <a href="https://www.dell.com/en-ca/lp/legal/policies-privacy  
+">Privacy Statement</a>. You can <a href="https://www.dell.com/preferences/listremoval
+">unsubscribe</a> at any time.
+	
+												</p>
+												<br>
+												<p style="
+    margin-left: 18px;
+">
+													<input type="checkbox" name="data[25]" id="opt-in2"  value="Yes, I would like Dell to contact me by email." > Yes, I would like Dell to contact me by email.<br>
+													<input type="checkbox" name="data[26]" id="opt-in3"  value="Yes, I would like Dell to contact me by phone." >  Yes, I would like Dell to contact me by phone.
+												</label></p>
+											 
+												
+																		
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="spacer"></div>
+
+
+
+											<center><input type="submit" value="Download now" id="submit_button"
+													name="submit"></center>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</div> <!-- END Form -->
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end row tag -->
+		<footer>
+			<div class="span12 center">
+				<p style="color : #000000;padding-bottom: 10px !important;">Biz-Tech-Insights, 300 California St., Suite 200, San Francisco, CA 94104
+			</br>&copy; 2026 Biz-Tech-Insights | <a
+						href="https://b2b-insight.biz-tech-insights.com/unsubscribed/" style="color : #000000;">Click
+						here to unsubscribe</a> | <a href="https://biz-tech-insights.com/privacy-policy/"
+						style="color : #000000;">Biz-Tech-Insights Privacy Policy</a><br>
+
+					<a style="color:#000;" href="https://www.dell.com/en-uk/lp/legal/policies-privacy " target="_blank">Dell Privacy Policy</a>
+				</p>
+			</div>
+		</footer>
+	</div> <!-- end container tag -->
+	</div>
+</body>
+
+</html>
